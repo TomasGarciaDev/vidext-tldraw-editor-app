@@ -1,5 +1,3 @@
-"use client";
-
 import {
   ResizableHandle,
   ResizablePanel,
@@ -13,7 +11,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className='flex flex-col h-screen'>
+    <div className='flex flex-col h-screen bg-gray-100'>
       <Navbar />
 
       <ResizablePanelGroup direction='horizontal' className='flex-grow'>

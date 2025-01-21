@@ -1,6 +1,6 @@
 "use client";
 
-import Layout from "@/components/layout";
+import Layout from "@/components/Layout";
 import { trpc, trpcClientConfig } from "@/utils/trpc";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./globals.css";
