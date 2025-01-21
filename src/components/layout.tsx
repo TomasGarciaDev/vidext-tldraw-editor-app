@@ -5,6 +5,7 @@ import {
   ResizablePanel,
   ResizablePanelGroup,
 } from "@/components/ui/resizable";
+import Navbar from "./NavBar";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -13,9 +14,8 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <div className='flex flex-col h-screen'>
-      <nav className='bg-gray-800 text-white p-4'>
-        This is going to be the Navbar
-      </nav>
+      <Navbar />
+
       <ResizablePanelGroup direction='horizontal' className='flex-grow'>
         <ResizableHandle />
         <ResizablePanel>
