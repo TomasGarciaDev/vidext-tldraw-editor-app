@@ -34,7 +34,7 @@ An intuitive drawing and shape-editing tool built with modern web technologies. 
 - [tRPC](https://trpc.io/): Ensures type-safe communication between the frontend and backend, simplifying data flow.
 - [Node.js](https://nodejs.org/en): Provides the runtime for backend logic.
 - [Zod](https://zod.dev/): A powerful TypeScript-first schema validation library used for validating and parsing API inputs and outputs, ensuring data integrity and type safety.
-- [File System (fs)](https://nodejs.org/api/fs.html): Persists data locally by reading and writing a data.json file.
+- [Debounce (Lodash)](https://lodash.com/docs/4.17.15#debounce): Reduces redundant API calls by debouncing auto-save functionality, ensuring optimal performance.
   <br>
 
 ---
