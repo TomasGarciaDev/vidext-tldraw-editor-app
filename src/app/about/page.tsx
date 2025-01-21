@@ -3,7 +3,7 @@ import React from "react";
 const AboutPage: React.FC = () => {
   return (
     <div className='min-h-screen p-6'>
-      <div className='max-w-4xl mx-auto bg-white rounded-lg p-10'>
+      <div className='max-w-4xl mx-auto bg-white border-2 border-gray-600 rounded-lg p-10'>
         <h1 className='text-3xl font-bold text-gray-800 mb-4'>
           About This App
         </h1>
