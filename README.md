@@ -7,13 +7,15 @@ An intuitive drawing and shape-editing tool built with modern web technologies. 
 - Create and edit shapes dynamically.
 - Randomly cycle through shape types with ease (rectangle, triangle, ellipse, etc.).
 - Auto-save feature to persist changes between sessions.
-- Clean and responsive design with real-time updates.
+- Clean and responsive design with real-time updates.  
+  <br>
 
 ---
 
 ## Editor page
 
 ![Alt text](./public/app-screenshot.png "a title")
+<br>
 
 ---
 
@@ -32,8 +34,8 @@ An intuitive drawing and shape-editing tool built with modern web technologies. 
 - [tRPC](https://trpc.io/): Ensures type-safe communication between the frontend and backend, simplifying data flow.
 - [Node.js](https://nodejs.org/en): Provides the runtime for backend logic.
 - [Zod](https://zod.dev/): A powerful TypeScript-first schema validation library used for validating and parsing API inputs and outputs, ensuring data integrity and type safety.
-
 - [File System (fs)](https://nodejs.org/api/fs.html): Persists data locally by reading and writing a data.json file.
+  <br>
 
 ---
 
@@ -45,6 +47,7 @@ Follow these steps to run the project locally.
 
 - **Node.js** (v16 or later)
 - **npm** (v8 or later) or **yarn** (v1 or later)
+  <br>
 
 ### Installation
 
@@ -65,6 +68,8 @@ npm install
 yarn install
 ```
 
+<br>
+
 ### Running the app locally
 
 1. Start the development server
@@ -80,6 +85,8 @@ yarn dev
 ```bash
 http://localhost:3000
 ```
+
+<br>
 
 ### How to Use
 
