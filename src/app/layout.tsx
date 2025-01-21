@@ -1,17 +1,11 @@
 "use client";
 
-import { trpc } from "@/utils/trpc";
+import { trpc, trpcClientConfig } from "@/utils/trpc";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { httpBatchLink } from "@trpc/client";
+import "./globals.css";
 
 const queryClient = new QueryClient();
-const trpcClient = trpc.createClient({
-  links: [
-    httpBatchLink({
-      url: "/api/trpc",
-    }),
-  ],
-});
+const trpcClient = trpc.createClient(trpcClientConfig());
 
 export default function RootLayout({
   children,
