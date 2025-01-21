@@ -39,35 +39,119 @@ const AboutPage: React.FC = () => {
         <div className='mx-auto px-8'>
           <ul className='flex flex-col list-disc gap-4 text-gray-600 mb-6 text-left'>
             <li>
-              <strong>Next.js</strong>: Provides the app's structure and handles
-              routing, server-side rendering, and API routes for saving and
-              retrieving data.
+              <strong>
+                <a
+                  href='https://nextjs.org'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Next.js
+                </a>
+              </strong>
+              : Provides the app's structure and handles routing, server-side
+              rendering, and API routes for saving and retrieving data.
             </li>
             <li>
-              <strong>React</strong>: Powers the component-based user interface,
-              ensuring a responsive and interactive experience.
+              <strong>
+                <a
+                  href='https://reactjs.org'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  React
+                </a>
+              </strong>
+              : Powers the component-based user interface, ensuring a responsive
+              and interactive experience.
             </li>
             <li>
-              <strong>tRPC</strong>: Enables type-safe communication between the
-              frontend and backend, ensuring seamless data flow.
+              <strong>
+                <a
+                  href='https://trpc.io'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  tRPC
+                </a>
+              </strong>
+              : Enables type-safe communication between the frontend and
+              backend, ensuring seamless data flow.
             </li>
             <li>
-              <strong>TailwindCSS</strong>: Facilitates rapid styling and
-              ensures a clean and modern design.
+              <strong>
+                <a
+                  href='https://nodejs.org/en'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Node.js
+                </a>
+              </strong>
+              : Provides the runtime for backend logic.
             </li>
             <li>
-              <strong>Shadcn/UI</strong>: Adds a collection of beautifully
-              designed and reusable components, enhancing the app's visual
-              appeal and usability.
+              <strong>
+                <a
+                  href='https://zod.dev'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Zod
+                </a>
+              </strong>
+              : A powerful TypeScript-first schema validation library used for
+              validating and parsing API inputs and outputs.
             </li>
             <li>
-              <strong>Tldraw</strong>: Provides the core drawing and
-              shape-editing functionality, enabling users to create and
-              manipulate shapes in real-time.
+              <strong>
+                <a
+                  href='https://tailwindcss.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  TailwindCSS
+                </a>
+              </strong>
+              : Facilitates rapid styling and ensures a clean and modern design.
             </li>
             <li>
-              <strong>Debounce (Lodash)</strong>: Reduces redundant API calls by
-              debouncing auto-save functionality, ensuring optimal performance.
+              <strong>
+                <a
+                  href='https://ui.shadcn.com'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Shadcn/UI
+                </a>
+              </strong>
+              : Adds a collection of beautifully designed and reusable
+              components, enhancing the app's visual appeal and usability.
+            </li>
+            <li>
+              <strong>
+                <a
+                  href='https://tldraw.dev/'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Tldraw
+                </a>
+              </strong>
+              : Provides the core drawing and shape-editing functionality,
+              enabling users to create and manipulate shapes in real-time.
+            </li>
+            <li>
+              <strong>
+                <a
+                  href='https://lodash.com/docs/4.17.15#debounce'
+                  target='_blank'
+                  rel='noopener noreferrer'
+                >
+                  Debounce (Lodash)
+                </a>
+              </strong>
+              : Reduces redundant API calls by debouncing auto-save
+              functionality, ensuring optimal performance.
             </li>
           </ul>
         </div>
