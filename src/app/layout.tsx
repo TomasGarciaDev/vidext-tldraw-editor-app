@@ -1,5 +1,6 @@
 "use client";
 
+import Layout from "@/components/layout";
 import { trpc, trpcClientConfig } from "@/utils/trpc";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import "./globals.css";
@@ -15,11 +16,13 @@ export default function RootLayout({
   return (
     <html lang='en'>
       <body>
-        <QueryClientProvider client={queryClient}>
-          <trpc.Provider client={trpcClient} queryClient={queryClient}>
-            {children}
-          </trpc.Provider>
-        </QueryClientProvider>
+        <Layout>
+          <QueryClientProvider client={queryClient}>
+            <trpc.Provider client={trpcClient} queryClient={queryClient}>
+              {children}
+            </trpc.Provider>
+          </QueryClientProvider>
+        </Layout>
       </body>
     </html>
   );

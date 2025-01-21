@@ -96,7 +96,7 @@ export default function EditorPage() {
   }, [editor, saveData]);
 
   return (
-    <div className='grid grid-rows-12 h-screen gap-4'>
+    <div className='grid grid-rows-12 h-full gap-4'>
       <div className='flex row-span-1 w-full justify-center items-center'>
         <Button
           onClick={modifyShape}
