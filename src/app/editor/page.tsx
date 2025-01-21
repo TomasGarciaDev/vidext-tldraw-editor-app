@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import { Tldraw, Editor, getSnapshot, loadSnapshot, TLShapeId } from "tldraw";
 import { trpc } from "@/utils/trpc";
 import { useState, useCallback, useEffect } from "react";
@@ -95,17 +96,19 @@ export default function EditorPage() {
   }, [editor, saveData]);
 
   return (
-    <div className='grid grid-rows-12 h-screen'>
-      <div className='flex row-span-1 w-full justify-center p-4 bg-gray-100'>
-        <button
+    <div className='grid grid-rows-12 h-screen gap-4'>
+      <div className='flex row-span-1 w-full justify-center items-center'>
+        <Button
           onClick={modifyShape}
-          className='text-white bg-gray-900 hover:bg-gray-700 p-4'
+          variant='default'
+          size='lg'
+          className='hover:bg-gray-700'
         >
           Modify Shape
-        </button>
+        </Button>
       </div>
 
-      <div className='row-span-11 border-4 border-black p-4 rounded-lg'>
+      <div className='row-span-11 border-4 border-black rounded-lg'>
         <Tldraw onMount={handleMount} className='rounded-lg' />
       </div>
     </div>
