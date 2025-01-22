@@ -16,7 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
 
       <ResizablePanelGroup direction='horizontal' className='flex-grow'>
         <ResizableHandle />
-        <ResizablePanel>
+        <ResizablePanel defaultSize={75} minSize={50}>
           <main className='h-full p-4 overflow-auto'>{children}</main>
         </ResizablePanel>
       </ResizablePanelGroup>
