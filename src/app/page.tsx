@@ -30,9 +30,8 @@ const HomePage: React.FC = () => {
               Create shapes and manipulate them using the tools available.
             </li>
             <li>
-              Randomly modify a shape using the {" "}
-              <Button size='sm'>Modify Shape</Button> button. To use it, select
-              a shape and click on the button.
+              Randomly modify a shape using the <strong>Modify Shape</strong>{" "}
+              button. To use it, select a shape and click on the button.
             </li>
             <li>Your progress is automatically saved as you work.</li>
           </ul>
