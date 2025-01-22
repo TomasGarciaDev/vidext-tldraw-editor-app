@@ -1,4 +1,84 @@
-import React from "react";
+import Link from "next/link";
+
+const technologies: { title: string; description: string; href: string }[] = [
+  {
+    title: "Next.js",
+    description:
+      "Provides the app's structure and handles routing, server-side rendering, and API routes for saving and retrieving data.",
+    href: "https://nextjs.org",
+  },
+  {
+    title: "React",
+    description:
+      "Powers the component-based user interface, ensuring Link responsive and interactive experience.",
+    href: "https://react.dev/",
+  },
+  {
+    title: "tRPC",
+    description:
+      "Enables type-safe communication between the frontend and backend, ensuring seamless data flow.",
+    href: "https://trpc.io/",
+  },
+  {
+    title: "Node.js",
+    description: "Provides the runtime for backend logic.",
+    href: "https://nodejs.org/en",
+  },
+  {
+    title: "Zod",
+    description:
+      "A powerful TypeScript-first schema validation library used for validating and parsing API inputs and outputs.",
+    href: "https://zod.dev/",
+  },
+  {
+    title: "TailwindCSS",
+    description:
+      "Facilitates rapid styling and ensures a clean and modern design.",
+    href: "https://tailwindcss.com/",
+  },
+  {
+    title: "Shadcn/UI",
+    description:
+      "Adds a collection of beautifully designed and reusable components, enhancing the app's visual appeal and usability.",
+    href: "https://ui.shadcn.com/",
+  },
+  {
+    title: "Tldraw",
+    description:
+      "Provides the core drawing and shape-editing functionality, enabling users to create and manipulate shapes in real-time.",
+    href: "https://tldraw.dev/",
+  },
+  {
+    title: "Debounce (Lodash)",
+    description:
+      " Reduces redundant API calls by debouncing auto-save functionality, ensuring optimal performance.",
+    href: "https://lodash.com/docs/4.17.15#debounce",
+  },
+];
+
+export const TechDescription = ({
+  title,
+  description,
+  href,
+}: {
+  title: string;
+  description: string;
+  href: string;
+}) => {
+  return (
+    <li>
+      <Link
+        href={href}
+        target='_blank'
+        rel='noopener noreferrer'
+        className='hover:underline font-bold'
+      >
+        {title}
+      </Link>
+      : {description}
+    </li>
+  );
+};
 
 const AboutPage: React.FC = () => {
   return (
@@ -38,121 +118,14 @@ const AboutPage: React.FC = () => {
         </h2>
         <div className='mx-auto px-8'>
           <ul className='flex flex-col list-disc gap-4 text-gray-600 mb-6 text-left'>
-            <li>
-              <strong>
-                <a
-                  href='https://nextjs.org'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Next.js
-                </a>
-              </strong>
-              : Provides the app's structure and handles routing, server-side
-              rendering, and API routes for saving and retrieving data.
-            </li>
-            <li>
-              <strong>
-                <a
-                  href='https://reactjs.org'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  React
-                </a>
-              </strong>
-              : Powers the component-based user interface, ensuring a responsive
-              and interactive experience.
-            </li>
-            <li>
-              <strong>
-                <a
-                  href='https://trpc.io'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  tRPC
-                </a>
-              </strong>
-              : Enables type-safe communication between the frontend and
-              backend, ensuring seamless data flow.
-            </li>
-            <li>
-              <strong>
-                <a
-                  href='https://nodejs.org/en'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Node.js
-                </a>
-              </strong>
-              : Provides the runtime for backend logic.
-            </li>
-            <li>
-              <strong>
-                <a
-                  href='https://zod.dev'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Zod
-                </a>
-              </strong>
-              : A powerful TypeScript-first schema validation library used for
-              validating and parsing API inputs and outputs.
-            </li>
-            <li>
-              <strong>
-                <a
-                  href='https://tailwindcss.com'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  TailwindCSS
-                </a>
-              </strong>
-              : Facilitates rapid styling and ensures a clean and modern design.
-            </li>
-            <li>
-              <strong>
-                <a
-                  href='https://ui.shadcn.com'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Shadcn/UI
-                </a>
-              </strong>
-              : Adds a collection of beautifully designed and reusable
-              components, enhancing the app's visual appeal and usability.
-            </li>
-            <li>
-              <strong>
-                <a
-                  href='https://tldraw.dev/'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Tldraw
-                </a>
-              </strong>
-              : Provides the core drawing and shape-editing functionality,
-              enabling users to create and manipulate shapes in real-time.
-            </li>
-            <li>
-              <strong>
-                <a
-                  href='https://lodash.com/docs/4.17.15#debounce'
-                  target='_blank'
-                  rel='noopener noreferrer'
-                >
-                  Debounce (Lodash)
-                </a>
-              </strong>
-              : Reduces redundant API calls by debouncing auto-save
-              functionality, ensuring optimal performance.
-            </li>
+            {technologies.map(({ title, description, href }) => (
+              <TechDescription
+                title={title}
+                description={description}
+                href={href}
+                key={title}
+              />
+            ))}
           </ul>
         </div>
 
